@@ -36,14 +36,14 @@ confirm(
     "\nIs this correct?"
 );
 
-var passwordCriteria = useUpperCase + useLowerCase + useNumbers + useSpecials;
-
-var upperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
-var numberCharacters = "123456789";
-var specialCharacters = "!@#$%^&*()-=";
-
 function generatePassword(pwLength, passwordCriteria) {
+  var upperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
+  var numberCharacters = "123456789";
+  var specialCharacters = "!@#$%^&*()-=";
+
+  var passwordCriteria = useUpperCase + useLowerCase + useNumbers + useSpecials;
+
   for (i = 0; i < pwLength; i++) {
     var character = Math.floor(Math.random() * passwordCriteria.pwlength);
     passwordText.value += passwordCriteria.substring(character, character + 1);
